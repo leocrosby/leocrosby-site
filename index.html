@@ -270,7 +270,7 @@
     <div class="resources-grid" style="margin-top:40px;">
       <!-- SERMON 1: Luke, the Certain Historian -->
       <a href="https://youtu.be/U2LJpl__j98" class="resource-card" target="_blank" rel="noopener">
-        <div class="thumb">Luke, the Certain Historian</div>
+        <div class="thumb"><img src="https://i.ytimg.com/vi/U2LJpl__j98/hqdefault.jpg" alt="Luke, the Certain Historian" loading="lazy"></div>
         <div class="body">
           <h4>Luke, the Certain Historian</h4>
           <p>A physician-turned-investigator's honest account of Jesus, and why that honesty is exactly why we can trust it.</p>
@@ -279,7 +279,7 @@
       </a>
       <!-- SERMON 2: Kings & Thrones - The Courage to Obey -->
       <a href="https://youtu.be/TbS9-Cuom1o" class="resource-card" target="_blank" rel="noopener">
-        <div class="thumb">Kings &amp; Thrones: The Courage to Obey</div>
+        <div class="thumb"><img src="https://i.ytimg.com/vi/TbS9-Cuom1o/hqdefault.jpg" alt="Kings & Thrones: The Courage to Obey" loading="lazy"></div>
         <div class="body">
           <h4>Kings &amp; Thrones: The Courage to Obey</h4>
           <p>What King Jehoshaphat's obedience cost him, and what it won him, when culture, crisis, and compromise all pushed the other way.</p>
@@ -288,7 +288,7 @@
       </a>
       <!-- SERMON 3: The Final Countdown - The Prophecies -->
       <a href="https://youtu.be/jXxSRaVVXKw" class="resource-card" target="_blank" rel="noopener">
-        <div class="thumb">The Final Countdown: The Prophecies</div>
+        <div class="thumb"><img src="https://i.ytimg.com/vi/jXxSRaVVXKw/hqdefault.jpg" alt="The Final Countdown: The Prophecies" loading="lazy"></div>
         <div class="body">
           <h4>The Final Countdown: The Prophecies</h4>
           <p>The 1-in-100-quadrillion odds behind the prophecies Jesus fulfilled, and what it means for the promises still ahead.</p>
@@ -389,17 +389,23 @@
       <p>Whether you're looking to book Leo to speak, start a coaching relationship, or bring in consulting for your leadership team, reach out below.</p>
     </div>
     <div class="contact-grid">
-      <form class="contact-form">
-        <input type="text" placeholder="Your name" required>
-        <input type="email" placeholder="Your email" required>
-        <select>
+      <!-- Contact form delivery: powered by Web3Forms (free, no backend needed).
+           Get your access key at https://web3forms.com (enter leo@leocrosby.com, the key
+           arrives by email instantly) and paste it in place of YOUR_ACCESS_KEY_HERE below. -->
+      <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="03a9187c-98e1-4d8c-96b0-941264df8a5d">
+        <input type="hidden" name="subject" value="New message from leocrosby.com">
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Your email" required>
+        <select name="inquiry_type">
           <option value="">What can I help with?</option>
           <option>Speaking Inquiry</option>
           <option>Executive Coaching</option>
           <option>Team Consulting</option>
           <option>General Question</option>
         </select>
-        <textarea placeholder="Your message"></textarea>
+        <textarea name="message" placeholder="Your message" required></textarea>
         <button type="submit" class="btn btn-primary">Send Message</button>
       </form>
       <div>
