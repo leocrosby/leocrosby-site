@@ -159,6 +159,32 @@
     margin-bottom:36px;
   }
   .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;}
+  .hero-signup{margin-bottom:32px;max-width:460px;}
+
+  /* LATEST POSTS STRIP */
+  .latest-posts{padding:56px 0 0;}
+  .latest-posts-head{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-bottom:28px;
+  }
+  .latest-posts-head h2{font-size:22px;}
+  .latest-posts-head a{
+    font-family:'Libre Franklin',sans-serif;
+    font-size:13px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    color:var(--gold);
+  }
+  .latest-posts-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+    gap:24px;
+  }
   .hero-portrait{
     width:100%;
     aspect-ratio:4/5;
@@ -228,6 +254,37 @@
     font-weight:500;
     line-height:1.5;
   }
+  .about-background{
+    margin-top:36px;
+    padding-top:28px;
+    border-top:1px solid rgba(15,34,55,0.1);
+  }
+  .about-background-label{
+    font-family:'Libre Franklin',sans-serif;
+    font-size:12px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    color:var(--gold);
+    display:block;
+    margin-bottom:14px;
+  }
+  .about-background ul{list-style:none;margin-bottom:16px;}
+  .about-background li{
+    font-size:15px;
+    color:#5A6068;
+    padding:8px 0;
+    border-top:1px solid rgba(15,34,55,0.06);
+  }
+  .about-background li:first-child{border-top:none;}
+  .about-linkedin{
+    font-family:'Libre Franklin',sans-serif;
+    font-size:13px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    color:var(--navy);
+  }
 
   /* FRAMEWORK */
   .not-is-grid{
@@ -260,7 +317,7 @@
 
   .pillars{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:repeat(3,1fr);
     gap:28px;
   }
   .pillar{
@@ -402,6 +459,84 @@
   .book-cover .eyebrow{color:var(--gold-light);}
   .book-cover h3{color:var(--white);font-size:26px;line-height:1.3;}
   .book-cover .sub{color:rgba(255,255,255,0.6);font-size:13px;margin-top:16px;letter-spacing:0.06em;text-transform:uppercase;}
+  .book-parts{
+    list-style:none;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px 24px;
+    margin-bottom:8px;
+  }
+  .book-parts li{
+    font-family:'Libre Franklin',sans-serif;
+    font-size:15px;
+    font-weight:600;
+    color:var(--navy);
+    padding:8px 0;
+    border-top:1px solid rgba(15,34,55,0.08);
+  }
+  .book-parts li span{
+    color:var(--gold);
+    font-weight:700;
+    margin-right:10px;
+  }
+  .book-parts-detailed{
+    margin-top:48px;
+    border-top:1px solid rgba(15,34,55,0.1);
+  }
+  .book-part{
+    border-bottom:1px solid rgba(15,34,55,0.1);
+    padding:20px 0;
+  }
+  .book-part summary{
+    display:flex;
+    align-items:baseline;
+    flex-wrap:wrap;
+    gap:14px;
+    cursor:pointer;
+    list-style:none;
+  }
+  .book-part summary::-webkit-details-marker{display:none;}
+  .book-part summary::after{
+    content:'+';
+    margin-left:auto;
+    font-size:20px;
+    color:var(--gold);
+    font-weight:700;
+  }
+  .book-part[open] summary::after{content:'\2212';}
+  .book-part summary .num{
+    font-family:'Libre Franklin',sans-serif;
+    font-size:13px;
+    font-weight:700;
+    color:var(--gold);
+  }
+  .book-part summary .part-name{
+    font-family:'Libre Franklin',sans-serif;
+    font-size:19px;
+    font-weight:700;
+    color:var(--navy);
+  }
+  .book-part summary .part-tagline{
+    font-size:15px;
+    color:#5A6068;
+    font-style:italic;
+  }
+  .book-chapters{
+    list-style:none;
+    margin-top:16px;
+    padding-left:27px;
+    display:grid;
+    gap:10px;
+  }
+  .book-chapters li{
+    font-size:15px;
+    color:#5A6068;
+    line-height:1.6;
+  }
+  .book-chapters li strong{
+    color:var(--navy);
+    font-weight:600;
+  }
   .signup-row{
     display:flex;
     gap:12px;
@@ -452,6 +587,24 @@
   .resource-card .body{padding:26px;}
   .resource-card h4{font-size:18px;margin-bottom:10px;}
   .resource-card p{font-size:14px;color:#5A6068;margin-bottom:16px;}
+  .preview-list{
+    list-style:none;
+    margin-bottom:16px;
+    border-top:1px solid rgba(15,34,55,0.08);
+  }
+  .preview-list li{
+    border-bottom:1px solid rgba(15,34,55,0.08);
+  }
+  .preview-list a{
+    display:block;
+    padding:10px 0;
+    font-size:14px;
+    font-weight:600;
+    color:var(--navy);
+    text-decoration:none;
+    line-height:1.4;
+  }
+  .preview-list a:hover{color:var(--gold);}
   .resource-card .link{
     font-family:'Libre Franklin',sans-serif;
     font-size:13px;
@@ -608,6 +761,22 @@
   }
   .article-body p:first-of-type{
     font-size:20px;
+    color:var(--navy);
+  }
+  .article-body h2{
+    font-size:26px;
+    margin:52px 0 20px;
+  }
+  .article-teaser{
+    margin-top:48px;
+    padding-top:32px;
+    border-top:1px solid rgba(15,34,55,0.12);
+    font-size:16px;
+    color:#5A6068;
+    font-style:italic;
+  }
+  .article-teaser strong{
+    font-style:normal;
     color:var(--navy);
   }
   .article-footer-nav{
