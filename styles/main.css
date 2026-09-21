@@ -160,6 +160,7 @@
   }
   .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;}
   .hero-signup{margin-bottom:32px;max-width:460px;}
+  .hero .ml-embedded{margin-bottom:24px;max-width:460px;}
 
   /* LATEST POSTS STRIP */
   .latest-posts{padding:56px 0 0;}
