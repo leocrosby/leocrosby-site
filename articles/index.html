@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Articles | Leo Crosby</title>
+<meta name="description" content="Practical writing on trust, clarity, and execution for executive pastors and leaders at any seat, from Leo Crosby.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="../index.html" class="logo">LEO <span>CROSBY</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#framework">Framework</a></li>
+      <li><a href="../index.html#speaking">Speaking</a></li>
+      <li><a href="../index.html#coaching">Coaching</a></li>
+      <li><a href="../index.html#book">Book</a></li>
+      <li><a href="index.html">Articles</a></li>
+      <li><a href="../index.html#resources">Resources</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="../index.html#contact" class="btn btn-primary">Book Leo</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <section class="articles-hero">
+    <div class="container">
+      <span class="eyebrow">Resources</span>
+      <h1>Articles</h1>
+      <p>Practical writing on trust, clarity, and execution, for executive pastors and leaders at any seat who want help, not more noise.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="articles-list">
+      <a href="who-i-am.html" class="article-card">
+        <span class="date">July 22, 2026</span>
+        <h3>Who I Am (and Why I'm Finally Writing This Down)</h3>
+        <p>Thirty years without the top title taught Leo that leadership was never about the seat. It's about what you build from wherever you're sitting.</p>
+        <span class="read-more">Read the Article &rarr;</span>
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div>&copy; <span id="year"></span> Leo Crosby. All rights reserved.</div>
+    <ul class="footer-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#speaking">Speaking</a></li>
+      <li><a href="../index.html#coaching">Coaching</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+</script>
+
+</body>
+</html>

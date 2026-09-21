@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Who I Am (and Why I'm Finally Writing This Down) | Leo Crosby</title>
+<meta name="description" content="Thirty years without the top title taught Leo Crosby that leadership was never about the seat. It's about what you build from wherever you're sitting.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="../index.html" class="logo">LEO <span>CROSBY</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#framework">Framework</a></li>
+      <li><a href="../index.html#speaking">Speaking</a></li>
+      <li><a href="../index.html#coaching">Coaching</a></li>
+      <li><a href="../index.html#book">Book</a></li>
+      <li><a href="index.html">Articles</a></li>
+      <li><a href="../index.html#resources">Resources</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="../index.html#contact" class="btn btn-primary">Book Leo</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <section class="article-hero">
+    <div class="container article-hero-inner">
+      <span class="eyebrow">Article</span>
+      <h1>Who I Am (and Why I'm Finally Writing This Down)</h1>
+      <div class="article-meta">Leo Crosby &nbsp;&middot;&nbsp; July 22, 2026</div>
+    </div>
+  </section>
+
+  <div class="container article-body">
+    <p>I'm Leo. Husband to LaDawna, father to our three kids, and for most of my career, an Executive Pastor, though the title has always mattered less to me than the work behind it. For more than thirty years, I've helped organizations move from vision to reality: launching churches, building national brands, leading capital campaigns, and building teams inside national ministries and multi-site churches. But if you ask what I actually do, it's simpler than any of that. I build leaders. I build the rooms they lead in.</p>
+
+    <p>I've never been the one with my name on the door. I've led from whatever seat I was given, the person helping someone else carry the vision, clarify the plan, and get the win. And for most of those thirty years, that shaped how I thought about my own voice. I figured writing or teaching about leadership was for the people with the platform, the title, the corner office. I had opinions. I just didn't think they'd earned their keep yet.</p>
+
+    <p>I was measuring the wrong thing.</p>
+
+    <p>What thirty years has actually taught me is that leadership was never about the seat. It's about what you build from wherever you're sitting: trust that turns into influence, influence that turns into alignment, alignment that turns into momentum. I don't aspire to be the smartest person in the room. I aspire to build rooms where everyone gets better because they're in it. That's the whole job, honestly: clarify the vision, remove the unnecessary complexity, build the culture on purpose instead of letting it drift, and get out of the way so people can do their best work.</p>
+
+    <p>A few convictions have held up over three decades, and they're the ones I keep coming back to. Mission comes first: every decision should move the organization closer to its purpose. People matter more than programs. Culture doesn't happen by accident; it has to be built on purpose or it drifts toward dysfunction. Execution is an act of leadership: vision that never gets implemented never changes anyone's life. And faithfulness gets measured over years, not moments.</p>
+
+    <p>Some of my best leadership lessons haven't come from a stage or a strategic plan. They've come from our dinner table, from coaching my kids through hard things, from a good conversation over coffee or bourbon with someone further down the road than me.</p>
+
+    <p>So this is me finally writing it down, not because I've arrived anywhere, but because I've made enough mistakes, watched enough good leaders up close, and spent enough years leading without the title to have something worth passing along. If you've ever thought you couldn't lead because you didn't have the title or the platform, this is for you.</p>
+
+    <p>I believe my calling isn't simply to lead organizations. It's to help leaders flourish, strengthen the local church, and faithfully steward every opportunity put in front of me. If I leave an organization healthier, a leader more confident, and the mission stronger than when I arrived, I've been successful.</p>
+  </div>
+
+  <div class="container article-footer-nav">
+    <a href="index.html" class="btn btn-outline">&larr; Back to All Articles</a>
+  </div>
+
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div>&copy; <span id="year"></span> Leo Crosby. All rights reserved.</div>
+    <ul class="footer-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#speaking">Speaking</a></li>
+      <li><a href="../index.html#coaching">Coaching</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+</script>
+
+</body>
+</html>
