@@ -43,13 +43,24 @@
   </section>
 
   <div class="container">
-    <div class="articles-list">
-      <a href="who-i-am.html" class="article-card">
+    <div class="articles-list" id="articlesList">
+      <a href="who-i-am.html" class="article-card" data-publish="2026-07-22">
         <span class="date">July 22, 2026</span>
         <h3>Who I Am (and Why I'm Finally Writing This Down)</h3>
         <p>Thirty years without the top title taught Leo that leadership was never about the seat. It's about what you build from wherever you're sitting.</p>
         <span class="read-more">Read the Article &rarr;</span>
       </a>
+
+      <a href="most-leaders-dont-have-the-final-word.html" class="article-card" data-publish="2026-07-22">
+        <span class="date">July 22, 2026</span>
+        <h3>Most Leaders Don't Have the Final Word</h3>
+        <p>Most leadership advice is written for the person at the top. This is for the much bigger group of leaders underneath that seat who make the vision real. Part 1 of a series.</p>
+        <span class="read-more">Read the Article &rarr;</span>
+      </a>
+
+      <!-- To add a future article, copy a block above, update the href/date/title/excerpt,
+           and set data-publish to the date it should go live (YYYY-MM-DD).
+           It will stay hidden until that date, then appear automatically. -->
     </div>
   </div>
 
@@ -73,6 +84,29 @@
   const navLinks = document.getElementById('navLinks');
   navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
   navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  // Scheduled publishing: hide any article card whose data-publish date hasn't arrived yet,
+  // then sort the remaining visible cards newest-first.
+  (function () {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const list = document.getElementById('articlesList');
+    const cards = Array.from(list.querySelectorAll('.article-card'));
+
+    const visible = [];
+    cards.forEach(card => {
+      const publishStr = card.getAttribute('data-publish');
+      const publishDate = publishStr ? new Date(publishStr + 'T00:00:00') : today;
+      if (publishDate > today) {
+        card.remove();
+      } else {
+        visible.push({ card, date: publishDate });
+      }
+    });
+
+    visible.sort((a, b) => b.date - a.date);
+    visible.forEach(item => list.appendChild(item.card));
+  })();
 </script>
 
 </body>
